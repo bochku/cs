@@ -1,2 +1,2 @@
 # cs
-CS  course for final sem 2019
+Files for CS3 course, sem 6 2019.
