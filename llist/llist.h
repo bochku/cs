@@ -18,8 +18,8 @@ class List {
         Node<T> *head, *tail;
         List();
         bool isEmpty();
-        void addBack(T);
-        void addFront(T);
+        void addBack(const T);
+        void addFront(const T);
         T remBack();
         T remFront();
         void show(); //WARNING: implemented only for T=int

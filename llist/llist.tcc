@@ -17,7 +17,7 @@ template <class T>
 bool List<T>::isEmpty() { return head == NULL; }
 
 template <class T>
-void List<T>::addBack( T d ) {
+void List<T>::addBack( const T d ) {
     Node<T> *n = new Node<T> ( d );
     if ( isEmpty() ) head = tail = n;
     else {
@@ -28,7 +28,7 @@ void List<T>::addBack( T d ) {
 }
 
 template <class T>
-void List<T>::addFront( T d ) {
+void List<T>::addFront( const T d ) {
     Node<T> *n = new Node<T> ( d );
     if ( isEmpty() ) head = tail = n;
     else {

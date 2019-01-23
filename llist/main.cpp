@@ -10,7 +10,7 @@ int main() {
         newlist.addFront( i );
     }
     //newlist.show();
-    printf( "Press something" );
+    //printf( "Press something" );
     getchar();
     while ( !newlist.isEmpty() ) {
         int i = newlist.remBack();
