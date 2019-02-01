@@ -2,21 +2,29 @@
 
 #include "llist.h"
 #include <stdio.h>
+#include <iostream>
+#include <string>
+using namespace std;
+
+template <> void List<string>::show() {
+    Node<string> *tmp = head;
+    while (tmp != NULL ) {
+        std::cout << tmp->data << ", ";
+        tmp = tmp->next;
+    }
+    std::cout << "\n";
+}
+
 
 int main() {
-    List<int> newlist;
-    for ( int i=0; i < 10; i++ ) {
-        //printf( "Adding %d\n", i );
-        newlist.addFront( i );
+    List<string> L;
+    L.addBack( "Hello World" );
+    L.addBack( "This is me" );
+    L.addBack( "Aditya" );
+    L.show();
+
+    while (!L.isEmpty() ) {
+        cout << L.remFront() << endl;
     }
-    //newlist.show();
-    //printf( "Press something" );
-    getchar();
-    while ( !newlist.isEmpty() ) {
-        int i = newlist.remBack();
-        printf( "%d ", i );
-        //getchar();
-    }
-    printf( "\n" );
     return 0;
 }

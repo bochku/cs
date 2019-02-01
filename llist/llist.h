@@ -7,7 +7,7 @@ template < class T >
 class Node {
     public:
         Node<T> *prev, *next;
-        int data;
+        T data;
         Node( const T );
         void show(); //WARNING: implemented only for T=int
 };
